@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Israa Ibrahim | Personal Website</title>
+  <meta name="description" content="Personal website for Israa Ibrahim." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Israa Ibrahim</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Toggle menu">☰</button>
+      <nav id="site-menu" class="site-nav" aria-label="Primary">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch theme">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <p class="eyebrow">Welcome</p>
+      <h1>Building thoughtful and accessible web experiences.</h1>
+      <p class="lead">
+        Hello, I'm Israa. This is my personal corner on the web where I share who I am and what I enjoy creating.
+      </p>
+      <a class="button" href="about.html">Learn more about me</a>
+    </section>
+
+    <section class="cards container" aria-label="Highlights">
+      <article class="card">
+        <h2>Design First</h2>
+        <p>Simple, clean layouts that work beautifully across devices and screen sizes.</p>
+      </article>
+      <article class="card">
+        <h2>Accessible</h2>
+        <p>Readable typography, strong contrast, and keyboard-friendly controls.</p>
+      </article>
+      <article class="card">
+        <h2>Adaptive</h2>
+        <p>A flexible interface that feels natural on desktop, tablet, and mobile.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Israa Ibrahim</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

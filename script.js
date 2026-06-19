@@ -4,9 +4,16 @@
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.getElementById('site-menu');
   const year = document.getElementById('year');
-  const storedTheme = localStorage.getItem('theme');
+  const allowedThemes = new Set(['light', 'dark']);
+  let storedTheme;
 
-  if (storedTheme === 'dark' || storedTheme === 'light') {
+  try {
+    storedTheme = localStorage.getItem('theme');
+  } catch (error) {
+    storedTheme = undefined;
+  }
+
+  if (allowedThemes.has(storedTheme)) {
     root.dataset.theme = storedTheme;
   }
 
@@ -26,7 +33,10 @@
     themeToggle.addEventListener('click', () => {
       const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
       root.dataset.theme = nextTheme;
-      localStorage.setItem('theme', nextTheme);
+      try {
+        localStorage.setItem('theme', nextTheme);
+      } catch (error) {
+      }
       updateThemeButton();
     });
   }

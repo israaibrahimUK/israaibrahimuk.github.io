@@ -10,6 +10,7 @@
   try {
     storedTheme = localStorage.getItem('theme');
   } catch (error) {
+    console.warn('Unable to read theme from localStorage.', error);
     storedTheme = undefined;
   }
 
@@ -36,6 +37,7 @@
       try {
         localStorage.setItem('theme', nextTheme);
       } catch (error) {
+        console.warn('Unable to save theme to localStorage.', error);
       }
       updateThemeButton();
     });
